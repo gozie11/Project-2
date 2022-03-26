@@ -5,16 +5,37 @@
     <title>Application</title>
     <link rel="stylesheet" href="static/bootstrap.css">
 </head>
-<body>
-    <nav></nav>
+<body style="background: repeating-linear-gradient(
+  45deg,
+  rgba(96,109,188,0.47),
+  rgba(96,109,188,0.46) 10px,
+  rgba(70,82,152,0.45) 10px,
+  rgba(70,82,152,0.45) 20px
+);">
 
-    <h1 class="m-5 p-5">ABC Company</h1>
     <div class="m-5 p-5">
-        Name:
-        <input type="text" name="name" value={{ user.name }}><br><br>
+        <img src="static/Amazon.jpg" style="max-width: 100px; float: left"/>
+        <h1 style="position: relative;">&nbsp; Amazon Jobs</h1>
+    </div>
 
-        Email:
-        <input type="email" name="email" value={{ user.email }}><br>
+    <div class="m-5 p-5">
+        <h3>Entry-Level Software Development</h3>
+        <p>We’re looking for software engineers who want to invent, build, and sometimes
+            break things to make them easier, faster, better, and more cost-effective.
+            To those who thrive at solving highly complex problems, and who aspire to
+            impact billions of lives on a global scale: come build the future with us.
+            <br><br>
+            At Amazon, you’ll be working with the best minds in technology. Learn and be
+            curious here, and accelerate your career growth. You can take pride in knowing
+            that your work is meaningful, having a positive impact on others and making
+            the world a better place.
+            <br><br>
+            With a software development career at Amazon, you’ll always find a new challenge
+            that excites you, complemented with competitive compensation and benefits that
+            enable you to live your best life.
+        </p>
+
+        <button onclick="userForm.html" style="color: darkslategray; font-weight: bold" type="button">Apply here</button>
 
     </div>
 
