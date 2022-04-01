@@ -35,7 +35,18 @@
             enable you to live your best life.
         </p>
 
-        <button onclick="userForm.html" style="color: darkslategray; font-weight: bold" type="button">Apply here</button>
+        <button id= "applyButton" type="button" style="color: darkslategray; font-weight: bold">
+                Apply here
+        </button>
+
+        <script>
+            var button = document.getElementById("applyButton");
+            button.addEventListener("click", function(){
+                document.location.href = 'upload';
+            });
+
+        </script>
+
 
     </div>
 

@@ -40,5 +40,10 @@ def index():  # put application's code here
     return render_template("index.html", user=user)
 
 
+@app.route('/upload/')
+def actors():
+    return render_template('upload.html')
+
+
 if __name__ == '__main__':
     app.run()
