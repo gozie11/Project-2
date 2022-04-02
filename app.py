@@ -33,9 +33,10 @@ def upload():
         return display()
     return render_template('upload.html')
 
+
 @app.route('/display/')
 def display():
-    pdfFileObj = open('static/sample_resume.pdf', 'rb')
+    pdfFileObj = open('data/sample_resume.pdf', 'rb')
     # Creating a pdf reader object
     pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
     # Getting number of pages in pdf file
@@ -54,12 +55,12 @@ def display():
         user['name'] = text[5]
         user['email'] = text[18]
 
-        '''for i in range(len(text)):
+        for i in range(len(text)):
             # Printing the line
-            # Lines are seprated using "\n"
+            # Lines are separated using "\n"
             print(text[i], end="\n")
-            # For Seprating the Pages
-        '''
+            # For Separating the Pages
+
     # closing the pdf file object
     pdfFileObj.close()
     return render_template('display.html')
