@@ -52,7 +52,9 @@ def display(usr):
         text = pageObj.extractText().split('\n')
         # Finally the lines are stored into list
         # For iterating over list a loop is used
-        user['name'] = text[5]
+        user['name'] = text[5:9]
+        user['address'] = text[10:13]
+        user['phonenum'] = text[14:17]
         user['email'] = text[18]
 
         for i in range(len(text)):
@@ -63,7 +65,7 @@ def display(usr):
 
     # closing the pdf file object
     pdfFileObj.close()
-    return render_template('display.html')
+    return render_template('display.html', usr = user )
 
 
 if __name__ == '__main__':

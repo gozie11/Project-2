@@ -13,9 +13,9 @@
 );">
 <h1>Display Resume Data</h1>
 
-<form method = "GET" enctype=multipart/form-data>
-    <input type = "text" name = "text" />
-    <input type = "submit" />
+<form method = "POST" enctype=multipart/form-data>
+    <input type = "text" name = "text" value = "{{ usr[name] }}" />
+    <input type = "submit"/>
 </form>
 
 </body>
