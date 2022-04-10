@@ -14,9 +14,11 @@
 <h1>Display Resume Data</h1>
 
 <form method = "POST" enctype=multipart/form-data>
-    <input type = "text" name = "text" value = "{{ usr[name] }}" />
+    <input type = "text" name = "text" value = "{{ name }}" />
+    <input type = "text" name = "text" value = {{ usr['email'] }} />
     <input type = "submit"/>
 </form>
+
 
 </body>
 </html>
