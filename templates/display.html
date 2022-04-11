@@ -11,7 +11,7 @@
   rgba(70,82,152,0.45) 10px,
   rgba(70,82,152,0.45) 20px
 );">
-<h1>Display Resume Data</h1>
+<h1> Confirm Information </h1>
 
 <form action = "/display" method = "POST" enctype=multipart/form-data>
     <label for="name"> Name:</label><br>
@@ -27,8 +27,8 @@
     <input type = "text" name = "Phone Number" value = "{{ phonenum }}" /><br>
 
     <label for="info"> Info:</label><br>
-    <input style="height: auto;" type = "text" name = "info" value = "{{ info }}" />
-
+    <textarea id="info" name="info" rows="20" cols="100">
+"{{ info }}"  </textarea>
 
     <input id = "submit" type = "submit"/>
 

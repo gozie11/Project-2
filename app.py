@@ -34,7 +34,7 @@ def upload():
     return render_template('upload.html')
 
 
-@app.route('/<usr>')
+@app.route('/<usr>', methods=['GET', 'POST'])
 def display(usr):
     pdfFileObj = open('data/sample_resume.pdf', 'rb')
     # Creating a pdf reader object
@@ -88,6 +88,7 @@ def display(usr):
 
     if request.method == 'POST':
         return redirect(url_for("index", usr=user))
+
     return render_template('display.html',
                            usr=user,
                            name=name,
