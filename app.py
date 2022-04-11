@@ -53,16 +53,19 @@ def display(usr):
         # Finally the lines are stored into list
         # For iterating over list a loop is used
         user['name'] = text[5:9]
-        test_string = user['name']
         user['address'] = text[10:13]
         user['phonenum'] = text[14:17]
         user['email'] = text[18]
+        user['info'] = text[19:]
 
         #print(user['name'])
 
-        test_name = ''.join(user['name'])
-        print(test_name)
-        #user['name'] = test_name
+        phonenum = ''.join(user['phonenum'])
+        address = ''.join(user['address'])
+        name = ''.join(user['name'])
+        info = ''.join(user['info'])
+
+
         # make a list using all the elements in user['name]
 
 
@@ -75,7 +78,7 @@ def display(usr):
 
     # closing the pdf file object
     pdfFileObj.close()
-    return render_template('display.html', usr = user, name = test_name )
+    return render_template('display.html', usr = user, name = name, phonenum = phonenum, address = address, info = info )
 
 
 if __name__ == '__main__':
