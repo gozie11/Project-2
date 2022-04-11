@@ -85,6 +85,9 @@ def display(usr):
 
     # closing the pdf file object
     pdfFileObj.close()
+
+    if request.method == 'POST':
+        return redirect(url_for("index", usr=user))
     return render_template('display.html',
                            usr=user,
                            name=name,
